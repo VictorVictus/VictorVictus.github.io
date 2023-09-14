@@ -36,8 +36,8 @@ body {
     display: flexbox;
 }
 .linklist{
-    font-size: 55px;
-    padding: 15%;
+    font-size: 50px;
+    padding: 12%;
     margin-left: 5px;
     background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
