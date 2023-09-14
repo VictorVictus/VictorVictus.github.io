@@ -1,0 +1,69 @@
+body {
+    padding-left: 5%;
+    padding-top: 5%;
+    background-image: linear-gradient(rgb(42, 72, 88),rgb(35, 89, 106),rgb(20, 107, 121),rgb(0, 125, 133),rgb(0, 143, 140),rgb(14, 161, 143),rgb(53, 178, 142),rgb(88, 195, 137),rgb(125, 211, 130),rgb(164, 226, 122),rgb(205, 239, 114),rgb(250, 250, 110));
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5%;
+    margin-bottom: 10%;
+}
+#panel-cv {
+    width: 30%;
+    border-color: white;
+    background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
+    border-style: solid;
+    padding: 2.5%;
+    border-radius: 15%;
+}
+#fotocv {
+    border-radius: 15%;
+    max-width: 100%;
+    height: auto;
+    border-style: solid;
+    border-color: rgb(44, 138, 138); 
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+}
+#links {
+    width: 30%;
+    display: flexbox;
+}
+.linklist{
+    font-size: 40px;
+    padding: 5%;
+    margin-left: 5px;
+    background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    margin-top: 5%;
+}
+.linklist:hover{
+    width: 175%;
+    transition: 1s;
+}
+.linklist:not(:hover){ 
+    width: 100%;
+    transition: 1s;
+}
+a:link { 
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color: red;
+    font-size: 120%;
+    transition: 1s;
+}
+a:not(:hover) {
+    color: white;
+    font-size: 100%;
+    transition: 1s;
+}
