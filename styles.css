@@ -20,6 +20,7 @@ body {
     background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
     border-style: solid;
     padding: 2.5%;
+    margin-bottom: 0%;
     border-radius: 15%;
 }
 #fotocv {
@@ -35,8 +36,8 @@ body {
     display: flexbox;
 }
 .linklist{
-    font-size: 40px;
-    padding: 5%;
+    font-size: 55px;
+    padding: 15%;
     margin-left: 5px;
     background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
@@ -44,7 +45,7 @@ body {
     margin-top: 5%;
 }
 .linklist:hover{
-    width: 175%;
+    width: 155%;
     transition: 1s;
 }
 .linklist:not(:hover){ 
