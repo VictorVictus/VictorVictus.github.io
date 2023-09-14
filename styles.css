@@ -46,11 +46,11 @@ body {
 }
 .linklist:hover{
     width: 155%;
-    transition: 1s;
+    transition: 1.5s;
 }
 .linklist:not(:hover){ 
     width: 100%;
-    transition: 1s;
+    transition: 1.25s;
 }
 a:link { 
     color: white;
