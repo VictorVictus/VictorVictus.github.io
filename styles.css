@@ -1,7 +1,7 @@
 body {
     padding-left: 5%;
     padding-top: 5%;
-    background-image: linear-gradient(rgb(42, 72, 88),rgb(35, 89, 106),rgb(20, 107, 121),rgb(0, 125, 133),rgb(0, 143, 140),rgb(14, 161, 143),rgb(53, 178, 142),rgb(88, 195, 137),rgb(125, 211, 130),rgb(164, 226, 122),rgb(205, 239, 114),rgb(250, 250, 110));
+    background-image: linear-gradient(rgb(42, 72, 88), rgb(39, 64, 81), rgb(36, 57, 73), rgb(34, 49, 66), rgb(31, 42, 58), rgb(27, 35, 50), rgb(24, 29, 42), rgb(20, 22, 35), rgb(16, 14, 27), rgb(9, 3, 20));
     color: white;
     text-align: left;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -20,8 +20,25 @@ body {
     background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
     border-style: solid;
     padding: 2.5%;
-    margin-bottom: 0%;
     border-radius: 15%;
+}
+#subtitulo{
+    margin-top: 10%;
+    font-style: italic;
+    text-align: center;
+}
+#panel-cv:hover{ 
+    transform: scale(1.15);
+    transition: 2s;
+}
+#panel-cv:not(:hover){ 
+    transform: scale(1);
+    transition: 2s;
+}
+#fotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 #fotocv {
     border-radius: 15%;
@@ -30,6 +47,22 @@ body {
     border-style: solid;
     border-color: rgb(44, 138, 138); 
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+}
+#fotoupc {
+    margin-left: 15px;
+    border-radius: 15%;
+    max-width: 50%;
+    height: auto;
+    border-radius: 100%;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+}
+#fotocv:hover{ 
+    transform: scale(1.15);
+    transition: 2s;
+}
+#fotocv:not(:hover){ 
+    transform: scale(1);
+    transition: 2s;
 }
 #links {
     width: 30%;
@@ -51,6 +84,9 @@ body {
 .linklist:not(:hover){ 
     width: 100%;
     transition: 1.25s;
+}
+.linklist a, .linklist a:visited{
+    text-decoration: none;
 }
 a:link { 
     color: white;
