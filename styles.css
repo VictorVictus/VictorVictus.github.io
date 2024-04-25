@@ -68,7 +68,12 @@ body {
 .contenidor {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    overflow: auto;
+    height: 115vh;
+}
+
+.contenidor-principal{
+    margin-right:2em;
 }
 
 .esquerra, .dreta {
@@ -79,6 +84,7 @@ body {
 
 .esquerra {
     background-color: #EADBC8;
+    flex: 1;
 }
 
 .dreta {
@@ -99,12 +105,11 @@ body {
 
 
 #principal {
-    padding: 1em 1em 0.5em 1em;
+    padding: 1em 0em 0em 1em;
     font-family: "Raleway", sans-serif;
     color: #31363F;
     font-size: 3.6em;
     text-shadow: 0.025em 0.025em 0.025em black;
-    margin-bottom: 0;
 }
 
 .carrera {
@@ -192,7 +197,7 @@ body {
 }
 /* The sidepanel menu */
 .sidepanel {
-    height: 250px; /* Specify a height */
+    height: 33em; /* Specify a height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */

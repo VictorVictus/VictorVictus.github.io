@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family    =Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
     <script src="scripts/navbar.js"></script>
+    <script src="scripts/languages.js"></script>
 </head>
 <body>
     <div class="barrasuperior">
@@ -19,11 +20,11 @@
             <h1 id="firma">VÍCTOR PUCHE</h1>
         </div>
         <div class="botones">
-            <p class="selecciodisclaimer">Selecciona el teu Idioma:</p>
+            <p class="selecciodisclaimer" id="disclaimeridiom">Selecciona el teu Idioma:</p>
             <select class="seleccioidioma" onchange="canviaIdioma()">
-                <option value="en">English</option>
                 <option value="ca">Català</option>
                 <option value="es">Español</option>
+                <option value="en">English</option>
                 <option value="de">Deutsch</option>
             </select>
             <a href="https://es.linkedin.com/in/v%C3%ADctor-puche-alonso-646368208/en">
@@ -34,9 +35,9 @@
     </div>
     <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Sobre mi</a>
-        <a href="#">El meu CV</a>
-        <a href="#">Projectes</a>
+        <a href="#" id="sobremi">Sobre mi</a>
+        <a href="#" id="micv">El meu CV</a>
+        <a href="#" id="projectes">Projectes</a>
       </div>      
     <div class="contenidor">
         <div class="esquerra">
@@ -46,17 +47,17 @@
                     <span id="primerapart">Descobreix el meu portafoli</span>
                     <span id="segonapart"> i més sobre mi.</span>
                 </h2>
-                <h2 class="carrera">Interessat en parlar amb mi?</h2>
+                <h2 class="carrera" id="interessatparla">Interessat en parlar amb mi?</h2>
                 <a href="mailto:vpuche16@gmail.com?subject=Lets%20Meet!&body=Hi%20there,">
                     <button id="contact">CONTACTA</button>  
                 </a>
             </div>
             <div class="fetamb">
                 <p>
-                    <span>
+                    <span id="fetambvis">
                         Fet amb Visual Studio i hosted online amb GitHub:
                     </span> 
-                    <span class="idiomes">
+                    <span class="idiomes" id="idiprog">
                         HTML, CSS i JavaScript - 2024
                     </span> 
                 </p>
