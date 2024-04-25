@@ -60,7 +60,7 @@ body {
     margin-right: 1em;
     border-style: solid;
     border-color: white;
-    border-radius: 0.01em;
+    border-radius: 0.3em;
     transition: 300ms;
 }
 
@@ -161,6 +161,7 @@ body {
 }
 .barrasuperior:hover .seleccioidioma{
     background-color: white;
+    border-color: #102C57;
     color: #102C57;
     transition: 300ms;
 }
