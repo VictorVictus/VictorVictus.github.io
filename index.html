@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family    =Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <script src="scripts/navbar.js"></script>
 </head>
 <body>
     <div class="barrasuperior">
@@ -18,7 +19,7 @@
             <h1 id="firma">VÍCTOR PUCHE</h1>
         </div>
         <div class="botones">
-            <p class="selecciodisclaimer">Selecciona el teu Idioma</p>
+            <p class="selecciodisclaimer">Selecciona el teu Idioma:</p>
             <select class="seleccioidioma" onchange="canviaIdioma()">
                 <option value="en">English</option>
                 <option value="ca">Català</option>
@@ -28,13 +29,19 @@
             <a href="https://es.linkedin.com/in/v%C3%ADctor-puche-alonso-646368208/en">
                 <img src="img/linkedinblanco.png" alt="sidebarbutton" class="botonlinkedin">
             </a>
-            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar">
+            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar openbtn" onclick="openNav()">
         </div>
     </div>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Sobre mi</a>
+        <a href="#">El meu CV</a>
+        <a href="#">Projectes</a>
+      </div>      
     <div class="contenidor">
         <div class="esquerra">
             <div class="contenidor-principal">
-                <h1 id="principal">Enginyer Electrònic Industrial i Automàtic</h1>
+                <h1 id="principal">Estudiant Enginyeria Electrònica Industrial i Automàtica</h1>
                 <h2 class="carrera">
                     <span id="primerapart">Descobreix el meu portafoli</span>
                     <span id="segonapart"> i més sobre mi.</span>
@@ -43,6 +50,16 @@
                 <a href="mailto:vpuche16@gmail.com?subject=Lets%20Meet!&body=Hi%20there,">
                     <button id="contact">CONTACTA</button>  
                 </a>
+            </div>
+            <div class="fetamb">
+                <p>
+                    <span>
+                        Fet amb Visual Studio i hosted online amb GitHub:
+                    </span> 
+                    <span class="idiomes">
+                        HTML, CSS i JavaScript - 2024
+                    </span> 
+                </p>
             </div>
         </div>
         <div class="dreta">

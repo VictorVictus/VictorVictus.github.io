@@ -31,6 +31,7 @@ body {
 
 .botones{
     margin-left: auto;
+    display: flexbox;
 }
 
 .botonsidebar, .botonlinkedin {
@@ -81,6 +82,7 @@ body {
 }
 
 .dreta {
+    position: relative; /* Add this line */
     background-color: #DAC0A3;
     display: flex;
     align-items: center;
@@ -88,15 +90,16 @@ body {
 
 .dreta img {
     position: absolute;
-    top: 16.8%;
-    left: 50%;
-    width: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+
 #principal {
-    padding: 2em 1em 0.5em 1em;
+    padding: 1em 1em 0.5em 1em;
     font-family: "Raleway", sans-serif;
     color: #31363F;
     font-size: 3.6em;
@@ -151,6 +154,18 @@ body {
     content: url('img/sidebarbutton.png'); /* Change image source on hover */
     transition: 300ms;
 }
+.barrasuperior:hover .botones .botonsidebar:hover{
+    transform: scale(1.2);
+    transition: 100ms;
+}
+.barrasuperior:hover .botones .botonlinkedin:hover{
+    transform: scale(1.2);
+    transition: 100ms;
+}
+.barrasuperior:hover .botones .seleccioidioma:hover{
+    transform: scale(1.2);
+    transition: 100ms;
+}
 .barrasuperior:hover .botonlinkedin {
     content: url('img/linkedin.png'); /* Change image source on hover */
     transition: 300ms;
@@ -164,4 +179,52 @@ body {
     border-color: #102C57;
     color: #102C57;
     transition: 300ms;
+}
+.fetamb{
+    font-size: 1.15em;
+    margin-top: 8.5em;
+    margin-left: 1.2em;
+    color: #102C57;
+    text-shadow: 0.03em 0.03em 0.03em black;
+}
+.idiomes{
+    color: #A62349;
+}
+/* The sidepanel menu */
+.sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 10em;
+    right: 0;
+    background:linear-gradient(to bottom, #102C57,#31363F);  /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    border-radius: 0.5em;
+}
+  
+  /* The sidepanel links */
+.sidepanel a {
+    padding: 0.25em 0.25em 0.25em 1.5em;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-shadow: 0.05em 0.05em 0.05em #DAC0A3;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+    color:#A62349;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
