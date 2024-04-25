@@ -1,106 +1,166 @@
 body {
-    padding-left: 5%;
-    padding-top: 5%;
-    background-image: linear-gradient(rgb(42, 72, 88), rgb(39, 64, 81), rgb(36, 57, 73), rgb(34, 49, 66), rgb(31, 42, 58), rgb(27, 35, 50), rgb(24, 29, 42), rgb(20, 22, 35), rgb(16, 14, 27), rgb(9, 3, 20));
     color: white;
     text-align: left;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
 }
-#container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 5%;
-    margin-bottom: 10%;
-}
-#panel-cv {
-    width: 30%;
-    border-color: white;
-    background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
-    border-style: solid;
-    padding: 2.5%;
-    border-radius: 15%;
-}
-#subtitulo{
-    margin-top: 10%;
-    font-style: italic;
-    text-align: center;
-}
-#panel-cv:hover{ 
-    transform: scale(1.15);
-    transition: 2s;
-}
-#panel-cv:not(:hover){ 
-    transform: scale(1);
-    transition: 2s;
-}
-#fotos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#fotocv {
-    border-radius: 15%;
-    max-width: 100%;
-    height: auto;
-    border-style: solid;
-    border-color: rgb(44, 138, 138); 
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
-}
-#fotoupc {
-    margin-left: 15px;
-    border-radius: 15%;
-    max-width: 50%;
-    height: auto;
-    border-radius: 100%;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
-}
-#fotocv:hover{ 
-    transform: scale(1.15);
-    transition: 2s;
-}
-#fotocv:not(:hover){ 
-    transform: scale(1);
-    transition: 2s;
-}
-#links {
-    width: 30%;
-    display: flexbox;
-}
-.linklist{
-    font-size: 50px;
-    padding: 12%;
-    margin-left: 5px;
-    background-image: linear-gradient(to right,rgb(0, 137, 138),rgb(33, 93, 110),rgb(42, 72, 88));
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    margin-top: 5%;
-}
-.linklist:hover{
-    width: 155%;
-    transition: 1.5s;
-}
-.linklist:not(:hover){ 
+
+.barrasuperior {
+    padding: 1em;
+    padding-left: 2em;
+    text-align: left;
     width: 100%;
-    transition: 1.25s;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: #102C57;
+    transition: background-color 300ms, color 300ms;
 }
-.linklist a, .linklist a:visited{
-    text-decoration: none;
+
+.titulo{
+    padding-right: 5em;
 }
-a:link { 
+
+#firma{
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em;
+    letter-spacing: 0.25em;
+}
+
+.botones{
+    margin-left: auto;
+}
+
+.botonsidebar, .botonlinkedin {
+    height: auto;
+    width: 2.5em;
+    vertical-align: middle;
+    padding-right: 1em;
+    transition: content 300ms;
+}
+
+.selecciodisclaimer, .seleccioidioma {
+    height: auto;
+    vertical-align: middle;
+    padding-right: 1em;
+    font-family: "Raleway", sans-serif;
+    font-size: 1em;
     color: white;
+    transition: color 300ms;
 }
-a:visited {
+
+.seleccioidioma {
+    width: 6em;
+    background-color: #102C57;
+    border: none;
     color: white;
+    padding: 0.5em;
+    margin-right: 1em;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0.01em;
+    transition: 300ms;
 }
-a:hover {
-    color: red;
-    font-size: 120%;
-    transition: 1s;
+
+.contenidor {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
 }
-a:not(:hover) {
+
+.esquerra, .dreta {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.esquerra {
+    background-color: #EADBC8;
+}
+
+.dreta {
+    background-color: #DAC0A3;
+    display: flex;
+    align-items: center;
+}
+
+.dreta img {
+    position: absolute;
+    top: 16.8%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#principal {
+    padding: 2em 1em 0.5em 1em;
+    font-family: "Raleway", sans-serif;
+    color: #31363F;
+    font-size: 3.6em;
+    text-shadow: 0.025em 0.025em 0.025em black;
+    margin-bottom: 0;
+}
+
+.carrera {
+    font-family: "Raleway", sans-serif;
+    color: #31363F;
+    padding-left: 2.5em;
+    margin-top: 0em;
+    padding-bottom: 1em;
+    text-shadow: 0.025em 0.025em 0.025em black;
+}
+
+#segonapart {
+    color: #A62349;
+    text-shadow: 0.025em 0.025em 0.025em black;
+    transition: background-color 300ms, color 300ms, font-size 300ms;
+}
+
+#segonapart:hover {
+    text-decoration: underline;
+    text-decoration-color: #A62349;
+    font-size: larger;
+}
+
+#contact {
+    margin-left: 4em;
+    font-size: 1em;
+    width: 10em;
+    height: 3em;
+    background-color: #102C57;
     color: white;
-    font-size: 100%;
-    transition: 1s;
+    box-shadow: 0.05em 0.05em 0.05em black;
+    border-radius: 0.3em;
+    transition: font-size 300ms, background-color 300ms;
+}
+
+#contact:hover {
+    font-size: larger;
+    background-color: #1d54a5;
+}
+
+.barrasuperior:hover{
+    background-color: white;
+    color: #102C57;
+    transition: 300ms;
+}
+.barrasuperior:hover .botonsidebar {
+    content: url('img/sidebarbutton.png'); /* Change image source on hover */
+    transition: 300ms;
+}
+.barrasuperior:hover .botonlinkedin {
+    content: url('img/linkedin.png'); /* Change image source on hover */
+    transition: 300ms;
+}
+.barrasuperior:hover .selecciodisclaimer{
+    color: #102C57;
+    transition: 300ms;
+}
+.barrasuperior:hover .seleccioidioma{
+    background-color: white;
+    color: #102C57;
+    transition: 300ms;
 }

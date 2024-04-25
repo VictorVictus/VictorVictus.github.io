@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Victor's Web Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        <div id="container">
-            <div id="links">
-                <div class="linklist">
-                    <a href="aboutme.html">About me</a>
-                </div>
-                <div class="linklist">
-                    <a>Gallery of Pictures</a>
-                </div>
-                <div class="linklist">
-                    <a>Project Portfolio</a>
-                </div>
-            </div>
-            <div id="panel-cv">
-                <div>
-                    <div id="fotos">
-                        <img src="/img/Foto Carnet VIctor.png" id="fotocv">
-                        <img src="/img/upc-logo.png" id="fotoupc">
-                    </div>
-                    <h1>Hello World!</h1>
-                    <h2>Welcome to my page!</h2>
-                    <p>Facts about me:
-                    <ul>
-                        <li>I'm a <b>politician</b></li>
-                        <li>I'm an engineering <b>student</b></li>
-                        <li>I'm <b>20</b> years old</li>
-                        <li>I'm <b>Catalan</b></li>
-                    </ul>
-                    </p>
-                    <h3>Interested to know more about my professional career? Connect with me on Linkedin 
-                        <a href="https://www.linkedin.com/in/v%C3%ADctor-puche-alonso-646368208/" target="_blank">here!</a>
-                    </h3>
-                    <p id="subtitulo">Developed with Visual Studio Code</p>
-                </div>
+<head>
+    <title>Victor's Web Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family    =Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="barrasuperior">
+        <div class="titulo">
+            <h1 id="firma">VÍCTOR PUCHE</h1>
+        </div>
+        <div class="botones">
+            <p class="selecciodisclaimer">Selecciona el teu Idioma</p>
+            <select class="seleccioidioma" onchange="canviaIdioma()">
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+            </select>
+            <a href="https://es.linkedin.com/in/v%C3%ADctor-puche-alonso-646368208/en">
+                <img src="img/linkedinblanco.png" alt="sidebarbutton" class="botonlinkedin">
+            </a>
+            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar">
+        </div>
+    </div>
+    <div class="contenidor">
+        <div class="esquerra">
+            <div class="contenidor-principal">
+                <h1 id="principal">Enginyer Electrònic Industrial i Automàtic</h1>
+                <h2 class="carrera">
+                    <span id="primerapart">Descobreix el meu portafoli</span>
+                    <span id="segonapart"> i més sobre mi.</span>
+                </h2>
+                <h2 class="carrera">Interessat en parlar amb mi?</h2>
+                <a href="mailto:vpuche16@gmail.com?subject=Lets%20Meet!&body=Hi%20there,">
+                    <button id="contact">CONTACTA</button>  
+                </a>
             </div>
         </div>
-    </body>
+        <div class="dreta">
+            <img src="img/mi cara.jpg" alt="mi cara bro">
+        </div>
+    </div>
+</body>
 </html>
