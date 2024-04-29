@@ -372,6 +372,7 @@ body {
     height: auto;
     width: 3em;
     transition: 300ms;
+    animation: respiraanim 1s infinite alternate;
 }
 #scrolldown:hover{
     content: url(img/scrolldownblue.png);
