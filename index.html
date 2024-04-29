@@ -30,11 +30,12 @@
             <a href="https://es.linkedin.com/in/v%C3%ADctor-puche-alonso-646368208/en">
                 <img src="img/linkedinblanco.png" alt="sidebarbutton" class="botonlinkedin">
             </a>
-            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar openbtn" onclick="openNav()">
+            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar openbtn" onclick="obreNavBar()">
         </div>
     </div>
     <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="javascript:void(0)" class="bototanca" onclick="tancaNavBar()">&times;</a>
+        <img src="img/Logo Marca Personal (sin titulo).png" id="logomarca">
         <a href="#" id="sobremi">Sobre mi</a>
         <a href="#" id="micv">El meu CV</a>
         <a href="#" id="projectes">Projectes</a>
@@ -45,7 +46,7 @@
                 <h1 id="principal">Estudiant Enginyeria Electrònica Industrial i Automàtica</h1>
                 <h2 class="carrera">
                     <span id="primerapart">Descobreix el meu portafoli</span>
-                    <span id="segonapart"> i més sobre mi.</span>
+                    <span id="segonapart" onclick="window.location.href = 'aboutme.html';">i més sobre mi.</span>
                 </h2>
                 <h2 class="carrera" id="interessatparla">Interessat en parlar amb mi?</h2>
                 <a href="mailto:vpuche16@gmail.com?subject=Lets%20Meet!&body=Hi%20there,">

@@ -26,7 +26,7 @@ body {
 #firma{
     font-family: "Raleway", sans-serif;
     font-size: 1.5em;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.4em;
 }
 
 .botones{
@@ -131,6 +131,7 @@ body {
     text-decoration: underline;
     text-decoration-color: #A62349;
     font-size: larger;
+    cursor: pointer;
 }
 
 #contact {
@@ -148,6 +149,7 @@ body {
 #contact:hover {
     font-size: larger;
     background-color: #1d54a5;
+    cursor: pointer;
 }
 
 .barrasuperior:hover{
@@ -187,7 +189,7 @@ body {
 }
 .fetamb{
     font-size: 1.15em;
-    margin-top: 8.5em;
+    margin-top: 25em;
     margin-left: 1.2em;
     color: #102C57;
     text-shadow: 0.03em 0.03em 0.03em black;
@@ -195,7 +197,6 @@ body {
 .idiomes{
     color: #A62349;
 }
-/* The sidepanel menu */
 .sidepanel {
     height: 33em; /* Specify a height */
     width: 0; /* 0 width - change this with JavaScript */
@@ -203,33 +204,57 @@ body {
     z-index: 1; /* Stay on top */
     top: 10em;
     right: 0;
-    background:linear-gradient(to bottom, #102C57,#31363F);  /* Black*/
+    background:#08152a;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
     border-radius: 0.5em;
 }
-  
-  /* The sidepanel links */
 .sidepanel a {
-    padding: 0.25em 0.25em 0.25em 1.5em;
+    padding: 0.25em 0.25em 0.25em 0.1em;
+    margin-left: 2em;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.75em;
     color: white;
-    display: block;
-    transition: 0.3s;
+    display: inline-block;
+    transition: 0.15s;
     text-shadow: 0.05em 0.05em 0.05em #DAC0A3;
 }
-  
-  /* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
-    color:#A62349;
+    color:#102C57;
+    background-color: white;
+    margin-left: 0;
+    padding-right: 1em;
+    padding-left: 1em;
+    border-radius: 0em 1em 1em 0em;
 }
-
-.sidepanel .closebtn {
+.sidepanel .bototanca:hover {
+    color: white;
+    background-color:#08152a;
+    padding: 0.25em 0.25em 0.25em 0.1em;
+    text-shadow: 0.05em 0.05em 0.05em #DAC0A3;
+    margin-left: 2em;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidepanel .bototanca {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+#logomarca{
+    position: relative;
+    top: -1em;
+    left: -1em;
+    width: auto;
+    height: 8em;
+    margin-left: 4em;
+    transition: 0.2s;
+    background-color: white;
+    border-radius: 8em;
+    border-style: solid;
 }
