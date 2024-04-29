@@ -274,4 +274,176 @@ body {
 .logos{
     display: flex;
     margin-left: 1em;
+    transition: 300ms;
+}
+.logos img:hover{
+    animation: spin 1s;
+    transition: 300ms;
+}
+#barracarrega {
+    border: 16px solid white; /* Light grey */
+    border-top: 16px solid #102C57; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px; /* Half of the height */
+    margin-left: -60px; /* Half of the width */
+    z-index: 9999; /* Ensure it's above other elements */
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.contenidor2{
+    background-color: #DAC0A3;
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    color: #31363F;
+}
+#imagencara{
+    height: auto;
+    width: 25em;
+    margin-left: 1em;
+    margin-top: 5em;
+    border-radius: 15em;
+    border-color: white;
+    border-style: solid;
+    border-width: 0.25em;
+    box-shadow: 0.5em 0.5em 0.5em #31363F;
+}
+#quisoc{
+    font-size: 5em;
+    text-shadow: 0.025em 0.025em 0.025em black;
+}
+.biografia{
+    margin-left: 3em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+.biografia h3{
+    text-decoration: underline;
+    text-shadow: 0.03em 0.03em 0.03em black;
+}
+.biografia p{
+    font-size: 1.2em;
+    text-shadow: 0.02em 0.02em 0.02em #31363F;
+}
+.biografia hr{
+    border-top: 0.2em solid #31363F;
+    border-bottom: 0.2em solid #31363F;
+}
+#animat{
+    text-decoration: none;
+}
+#portafolilink{
+    color: #A62349;
+    transition: 300ms;
+}
+#portafolilink:hover{
+    text-decoration: underline;
+    text-decoration-color: #A62349;
+    font-size: larger;
+    cursor: pointer;
+    transition: 300ms;
+}
+.esquerra2 .fetamb{
+    margin-top: 2em;
+    margin-left: 2em;
+}
+.esquerra2 .logos{
+    margin-left: 2em;
+}
+.contenidor3{
+    background-color: #DAC0A3;
+    font-family: "Raleway", sans-serif;
+    color: #31363F;
+}
+.imgscroll{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-left: 65em;
+}
+#scrolldown{
+    height: auto;
+    width: 3em;
+    transition: 300ms;
+}
+#scrolldown:hover{
+    content: url(img/scrolldownblue.png);
+    transform: scale(1.1);
+    transition: 300ms;
+    cursor: pointer;
+}
+.galeriacapcelera{
+    margin-top: 10em;
+    margin-left: 13em;
+    margin-bottom: 10em;
+    text-shadow: 0.025em 0.025em 0.025em black;
+    font-size: 2em;
+}
+#galeriatitle{
+    text-decoration: underline;
+}
+.galeria{
+    display: block;
+    margin-left: 20em;
+    margin-top: 5em;
+}
+.galeria img{
+    width: 35%;
+    cursor: pointer;
+    border: 0.5em white;
+    border-style: solid;
+    margin: 0.5em;
+    transition: 200ms;
+    border-radius: 1em;
+}
+#fotosagales{
+    margin-bottom: 12em;
+}
+#foto5{
+    margin-bottom: 9em;
+}
+#foto6{
+    margin-bottom: 5em;
+}
+.galeria img:hover{
+    rotate: 10deg;
+    transition: 200ms;
+    transform: scale(1.1);
+}
+.fullimatge{
+    width: 100%;
+    height: 100%;
+    background-color: #000000d2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.fullimatge img{
+    width: 90%;
+    max-width: 50em;
+    border-radius: 1em;
+}
+.fullimatge span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+    transition: 200ms;
+}
+.fullimatge span:hover{
+    transform: scale(2);
+    transition: 200ms;
 }
