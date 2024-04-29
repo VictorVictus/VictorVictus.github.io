@@ -53,7 +53,7 @@ body {
 }
 
 .seleccioidioma {
-    width: 6em;
+    width: 6.5em;
     background-color: #102C57;
     border: none;
     color: white;
@@ -144,12 +144,25 @@ body {
     box-shadow: 0.05em 0.05em 0.05em black;
     border-radius: 0.3em;
     transition: font-size 300ms, background-color 300ms;
+    animation: respiraanim 1s infinite alternate;
+}
+
+@keyframes respiraanim{
+ 
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
 }
 
 #contact:hover {
     font-size: larger;
     background-color: #1d54a5;
     cursor: pointer;
+    animation: none;
+    text-decoration: underline;
 }
 
 .barrasuperior:hover{
@@ -189,7 +202,7 @@ body {
 }
 .fetamb{
     font-size: 1.15em;
-    margin-top: 25em;
+    margin-top: 20em;
     margin-left: 1.2em;
     color: #102C57;
     text-shadow: 0.03em 0.03em 0.03em black;
@@ -257,4 +270,8 @@ body {
     background-color: white;
     border-radius: 8em;
     border-style: solid;
+}
+.logos{
+    display: flex;
+    margin-left: 1em;
 }
