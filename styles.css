@@ -69,7 +69,7 @@ body {
     display: flex;
     justify-content: space-between;
     overflow: auto;
-    height: 115vh;
+    height: auto;
 }
 
 .contenidor-principal{
@@ -447,4 +447,139 @@ body {
 .fullimatge span:hover{
     transform: scale(2);
     transition: 200ms;
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .contenidor {
+        flex-direction:row;
+        height: auto;
+    }
+    .esquerra, .dreta {
+        width: 100%;
+    }
+    .botones{
+        padding-right: 2em;
+    }
+    .fetamb, .logos{
+        margin-left: 1em;
+    }
+
+}
+
+/* For screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .contenidor {
+        flex-direction: column;
+        height: auto;
+    }
+    .esquerra {
+        width: 100%;
+    }
+    .dreta {
+        display: none;
+    }
+    .barrasuperior {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .titulo {
+        padding-right: 1em;
+    }
+    #firma {
+        font-size: 1em;
+    }
+    .botones {
+        margin-left: 1em;
+    }
+    .botonsidebar, .botonlinkedin {
+        width: 2em;
+        margin-top: 1em;
+    }
+    .seleccioidioma {
+        width: 6.5em;
+    }
+    .contenidor-principal {
+        padding-right: 1em;
+    }
+    #principal {
+        font-size: 2em;
+        margin-left: -0.5em;
+    }
+    .carrera {
+        margin-left: -1em;
+        font-size: 1.2em;
+    }
+    #contact {
+        margin-top: 2em;
+        margin-left: 1em;
+        font-size: 1.5em;
+        width: 8em;
+        height: 2.5em;
+    }
+    .fetamb {
+        margin-top: 5em;
+    }
+    .logos {
+        margin-left: 0.5em;
+    }
+}
+
+/* For screens smaller than 400px */
+@media screen and (max-width: 400px) {
+    .contenidor {
+        flex-direction: column;
+        height: auto;
+    }
+    .esquerra{
+        width: 100%;
+    }
+    .dreta{
+        display: none;
+    }
+    .barrasuperior {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .titulo {
+        padding-right: 1em;
+    }
+    #firma {
+        font-size: 1em;
+        margin-left: 1em;
+    }
+    .botones {
+        margin-left: 1em;
+    }
+    .botonsidebar, .botonlinkedin {
+        width: 2em;
+        margin-top: 1em;
+    }
+    .seleccioidioma {
+        width: 6.5em;
+    }
+    .contenidor-principal {
+        padding-right: 1em;
+    }
+    #principal {
+        font-size: 2em;
+        margin-left: -0.5em;
+    }
+    .carrera {
+        margin-left: -1em;
+        font-size: 1.2em;
+    }
+    #contact {
+        margin-top: 2em;
+        margin-left: 1em;
+        font-size: 1.5em;
+        width: 8em;
+        height: 2.5em;
+    }
+    .fetamb {
+        margin-top: 5em;
+    }
+    .logos {
+        margin-left: 0.5em;
+    }
 }
