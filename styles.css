@@ -366,7 +366,8 @@ body {
     display: flex;
     align-items: center;
     justify-self: center;
-    margin-left: 65em;
+    margin-left: 45em;
+    padding-top: 5em;
 }
 #scrolldown{
     height: auto;
@@ -382,8 +383,8 @@ body {
 }
 .galeriacapcelera{
     margin-top: 10em;
-    margin-left: 13em;
-    margin-bottom: 10em;
+    margin-left: 8em;
+    margin-bottom: 5em;
     text-shadow: 0.025em 0.025em 0.025em black;
     font-size: 2em;
 }
@@ -398,11 +399,21 @@ body {
 .galeria img{
     width: 35%;
     cursor: pointer;
-    border: 0.5em white;
+    border: 0.35em white;
     border-style: solid;
     margin: 0.5em;
     transition: 200ms;
     border-radius: 1em;
+    animation: respiraanim1 1s infinite alternate;
+}
+@keyframes respiraanim1{
+ 
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.02);
+    }
 }
 #fotosagales{
     margin-bottom: 12em;
