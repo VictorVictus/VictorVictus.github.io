@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family    =Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicons/favicon.ico"">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicons/favicon.ico">
 </head>
 <body>
     <div class="barrasuperior">
@@ -19,7 +19,7 @@
             <h1 id="firma">VÍCTOR PUCHE</h1>
         </div>
         <div class="botones">
-            <p class="selecciodisclaimer" id="disclaimeridiom">Selecciona el teu Idioma:</p>
+            <p class="selecciodisclaimer" id="disclaimeridiom">Selecciona tu Idioma:</p>
             <select class="seleccioidioma" onchange="canviaIdioma()">
                 <option value="ca">Català</option>
                 <option value="es">Español</option>
@@ -33,19 +33,19 @@
         </div>
     </div>
     <div id="spanishver">
-        <h1>Versió Castellana del CV</h1>
+        <h1 id="cvtitle">Versió Castellana del CV</h1>
         <div id="mySidepanel" class="sidepanel">
             <a href="javascript:void(0)" class="bototanca" onclick="tancaNavBar()">&times;</a>
             <img src="img/Logo Marca Personal (sin titulo).png" id="logomarca">
             <a href="index.html" id="inici">Inici</a>
-            <a href="aboutme.html" id="sobremi">Sobre mi</a>
-            <a href="cv.html" id="micv">El meu CV</a>
-            <a href="projectes.html" id="projectes">Projectes</a>
+            <a href="aboutme.html" id="sobremi">Sobre mí</a>
+            <a href="cv.html" id="micv">Mi CV</a>
+            <a href="projectes.html" id="projectes">Proyectos</a>
         </div>
         <div id="barracarrega"></div>
         <div class="principalcv">
             <embed src="pdfs/CV-ESP.pdf" type="application/pdf">
-                <h1>Versió Anglesa del CV</h1>
+            <h1 id="englishtitle">Versió en Anglès del CV</h1>
             <embed src="pdfs/CV EN.pdf" type="application/pdf">
         </div>
     </div>
