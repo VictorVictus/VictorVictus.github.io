@@ -507,3 +507,25 @@ body {
         margin-left: 0.5em;
     }
 }
+#spanishver{
+    background-color: #DAC0A3;
+    color:#31363F;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 10em;
+    padding-right: 10em;
+    height: 105em;
+}
+#spanishver h1{
+    text-shadow: 0.1em 0.1em 0.1em #EADBC8;
+}
+.principalcv {
+    width: 100%; /* Make the div take up the full width of its parent */
+    height: 100vh; /* Use viewport height to make it cover the full height of the viewport */
+}
+.principalcv embed,
+.principalcv object,
+.principalcv iframe {
+    width: 100%; /* Make the embed cover the full width of its parent */
+    height: 100%; /* Make the embed cover the full height of its parent */
+}

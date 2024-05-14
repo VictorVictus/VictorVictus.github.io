@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Victor's Web Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family    =Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicons/favicon.ico"">
+</head>
+<body>
+    <div class="barrasuperior">
+        <div class="titulo">
+            <h1 id="firma">VÍCTOR PUCHE</h1>
+        </div>
+        <div class="botones">
+            <p class="selecciodisclaimer" id="disclaimeridiom">Selecciona el teu Idioma:</p>
+            <select class="seleccioidioma" onchange="canviaIdioma()">
+                <option value="ca">Català</option>
+                <option value="es">Español</option>
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
+            <a href="https://www.linkedin.com/in/victorpuche">
+                <img src="img/linkedinblanco.png" alt="sidebarbutton" class="botonlinkedin">
+            </a>
+            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar openbtn" onclick="obreNavBar()">
+        </div>
+    </div>
+    <div id="spanishver">
+        <h1>Versió Castellana del CV</h1>
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="bototanca" onclick="tancaNavBar()">&times;</a>
+            <img src="img/Logo Marca Personal (sin titulo).png" id="logomarca">
+            <a href="index.html" id="inici">Inici</a>
+            <a href="aboutme.html" id="sobremi">Sobre mi</a>
+            <a href="cv.html" id="micv">El meu CV</a>
+            <a href="projectes.html" id="projectes">Projectes</a>
+        </div>
+        <div id="barracarrega"></div>
+        <div class="principalcv">
+            <embed src="pdfs/CV-ESP.pdf" type="application/pdf">
+                <h1>Versió Anglesa del CV</h1>
+            <embed src="pdfs/CV EN.pdf" type="application/pdf">
+        </div>
+    </div>
+</body>
+<script src="scripts/navbar.js"></script>
+<script src="scripts/languages.js"></script>
+<script src="scripts/loader.js"></script>
+</html>
