@@ -1,88 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="ca">
+
 <head>
-    <title>Victor's Web Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About · Victor Puche</title>
+    <!-- View transitions API cache -->
+    <meta name="view-transition" content="same-origin" />
+    <link rel="icon" type="image/png" href="img/favicons/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Serif + Sans pairing -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family    =Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicons/favicon.ico"">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="barrasuperior">
-        <div class="titulo">
-            <h1 id="firma">VÍCTOR PUCHE</h1>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content: Refined Biography Layout -->
+    <main class="about-container">
+        <!-- Hero section with portrait and headline -->
+        <div class="about-hero">
+            <div class="about-hero__portrait">
+                <img src="img/cara.jpg" alt="Víctor Puche">
+            </div>
+            <div class="about-hero__title">
+                <span class="about-hero__pre-title" data-i18n="about_page_pre">Engineer in training · Community leader</span>
+                <h1>Víctor Puche</h1>
+                <p class="about-hero__subtitle" data-i18n="about_page_sub">Industrial Electronics and Automation Engineering Student<br>Financial Secretary · Bachelor and Master Representative at UPC</p>
+            </div>
         </div>
-        <div class="botones">
-            <p class="selecciodisclaimer" id="disclaimeridiom">Selecciona el teu Idioma:</p>
-            <select class="seleccioidioma" onchange="canviaIdioma()">
-                <option value="ca">Català</option>
-                <option value="es">Español</option>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-            </select>
-            <a href="https://www.linkedin.com/in/victorpuche">
-                <img src="img/linkedinblanco.png" alt="sidebarbutton" class="botonlinkedin">
-            </a>
-            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar openbtn" onclick="obreNavBar()">
+
+        <!-- Decorative divider -->
+        <div class="about-divider">
+            <span class="about-divider__icon">⚜</span>
         </div>
-    </div>
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="bototanca" onclick="tancaNavBar()">&times;</a>
-        <img src="img/Logo Marca Personal (sin titulo).png" id="logomarca">
-        <a href="index.html" id="inici">Inici</a>
-        <a href="aboutme.html" id="sobremi">Sobre mi</a>
-        <a href="cv.html" id="micv">El meu CV</a>
-        <a href="projectes.html" id="projectes">Projectes</a>
-    </div>
-    <div class="contenidor2">
-        <div class="esquerra2">
-            <img src="img/cara.jpg" id="imagencara">
-            <div class="fetamb">
-                <p>
-                    <span id="fetambvis">
-                        Fet amb Visual Studio i hosted online amb GitHub:
-                    </span> 
-                    <span class="idiomes" id="idiprog">
-                        HTML, CSS i JavaScript - 2024
-                    </span> 
+
+        <!-- Biography content in a more readable, elegant format -->
+        <div class="about-biography">
+            <div class="about-biography__intro">
+                <p class="dropcap" data-i18n="about_p1">My name is Víctor Puche i Alonso. I was born in the vibrant city of Barcelona, but currently call Palau-Solità i Plegamans my home, a charming town near the city. I am currently immersed in my studies of Industrial Electronics and Automation Engineering, a discipline that fuels my passion for innovation and technological progress.
                 </p>
             </div>
-            <div class="logos">
-                <img src="img/github.png">
-                <img src="img/html.png">
-                <img src="img/css.png">
-                <img src="img/js.png">
+
+            <div class="about-biography__grid">
+                <div class="about-card">
+                    <h3 data-i18n="about_c1_title">Community commitment</h3>
+                    <p data-i18n="about_c1_p1">From a young age, I have felt a strong commitment to my community and its well-being. For the past two years, I have actively participated in various community initiatives, acting as an intermediary between local residents and political authorities to improve everyone's quality of life. Through this, we have successfully engaged citizens during key municipal events.</p>
+                    <p data-i18n="about_c1_p2">These experiences have provided me with local and regional contacts, bridging political parties and neighborhood associations to relay citizen concerns directly to the administrations. Currently, I serve as the financial secretary of a neighborhood association, managing funds used for efficient citizen mobilization when necessary.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3 data-i18n="about_c2_title">University representation</h3>
+                    <p data-i18n="about_c2_p1">Recently, I had the honor of being elected to represent students in the cloister of the Universitat Politècnica de Catalunya. I ran as an independent candidate and won my parliamentary representation thanks to the support of my peers. This opportunity allows me to actively participate in university decision-making and defend our interests.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3 data-i18n="about_c3_title">Empathy and communication</h3>
+                    <p data-i18n="about_c3_p1">My interest in empathy and effective communication stems from personal experiences, including moments of adversity in my childhood. These events taught me the importance of understanding different perspectives and collaborating to find solutions.</p>
+                </div>
+
+                <div class="about-card">
+                    <h3 data-i18n="about_c4_title">Professional philosophy</h3>
+                    <p data-i18n="about_c4_p1">In the workplace, I firmly believe in creating an inclusive environment where individuals feel valued and can contribute their ideas openly. An organizational culture based on mutual respect and collaboration is essential for the success of any company.</p>
+                    <p data-i18n="about_c4_p2">Regarding economics, I am convinced that public-private collaboration can generate powerful synergies driving economic growth and social well-being. I believe in balancing business interests with general societal welfare, as companies ultimately exist to identify and solve societal problems in exchange for a monetary reward.</p>
+                </div>
+            </div>
+
+            <!-- Call to action to view CV -->
+            <div class="about-cta">
+                <p data-i18n="about_cta_p">Want to know more about me?</p>
+                <a href="cv.html" class="about-cta__link"><span data-i18n="about_cta_link">Find my CV</span> <span class="arrow">→</span></a>
             </div>
         </div>
-        <div class="biografia">
-            <h1 id="quisoc">Qui soc?</h1>
-            <h2>Estudiant Enginyeria Electrònica Industrial i Automàtica, Secretari de Finances d'una Associació Local, Representant de Grau i Master en la Universitat Politecnica de Catalunya (UPC)</h2>
-            <hr>
-            <h3 id="holasoc">Hola! Soc en Victor!</h3>
-            <p>Em dic Víctor Puche i Alonso. Vaig néixer a la vibrant ciutat de Barcelona, però actualment considero el meu llar a Palau-Solità i Plegamans, un encantador poble situat prop de la ciutat comtal. En l'actualitat, estic immers en els meus estudis d'Enginyeria Electrònica Industrial i Automàtica, una disciplina que desperta la meva passió per la innovació i el progrés tecnològic.<br><br>De jove, he sentit un fort compromís amb la meva comunitat i el seu benestar, però mai he pogut tenir l'oportunitat de poder realitzar accions per millorar la meva comunitat fins recentment. Des de fa dos anys, he participat activament en diverses iniciatives comunitàries, actuant com a intermediari entre els residents locals i les autoritats polítiques, amb l'objectiu de millorar la qualitat de vida de tots. Gràcies a això (i a la resta del veïnat), hem pogut posar en el punt de mira a la ciutadania sobre tot en esdeveniments clau del municipi com, per exemple, les eleccions municipals. Aquestes experiències també m'han proporcionat contactes en l'àmbit municipal i regional, gràcies a relacions entre els diferents partits polítics i les associacions veïnals, per poder traslladar les preocupacions de la ciutadania directament a les administracions pertinents. Actualment, sóc el secretari de finances d'una de les associacions veïnals, amb l'objectiu de gestionar les finances i els comptes bancaris de l'associació que s'utilitzen per fer una mobilització eficient de la ciutadania quan es determina necessari.<br><br>Recentment, vaig tenir l'honor de ser escollit per representar els estudiants al claustre de la Universitat Politècnica de Catalunya gràcies a les eleccions pel claustre universitari. Em vaig presentar com a candidat independent (fora de les associacions universitàries o llistes conjuntes) i vaig guanyar la meva representació parlamentària gràcies al suport dels meus companys de grau. Aquesta oportunitat m'ha permès ser part activa de la presa de decisions en l'àmbit universitari i defensar els interessos dels meus iguals.<br><br>El meu interès per l'empatia i la comunicació efectiva prové d'experiències personals, incloent moments d'adversitat en la meva infància. Aquests esdeveniments m'han ensenyat la importància de comprendre les diferents perspectives i treballar en col·laboració per trobar solucions.<br><br>En l'àmbit laboral, crec fermament en la creació d'un ambient inclusiu on cada individu se senti valorat i pugui contribuir amb les seves idees de manera lliure i oberta. Considero que una cultura organitzacional basada en el respecte mutu i la col·laboració és essencial per a l'èxit de qualsevol empresa o institució.<br><br>Pel que fa a les meves perspectives econòmiques, estic convençut que la col·laboració entre el sector privat i públic pot generar sinergies poderoses que impulsen el creixement econòmic i el benestar social. Crec en la importància de trobar un equilibri entre els interessos empresarials i el benestar general de la societat, els quals normalment estan encaminats de manera paral·lela ja que soc un fervent creient de que la finalitat fonamental de les empreses es identificar i resoldre problemes de la població general a canvi d'una recompensa monetaria.
-            <h3 id="animat">
-                <span>
-                    T'animes a saber mes de mi?
-                </span> 
-                <span>
-                    Troba el meu CV
-                </span> 
-                <a href="cv.html">
-                    <span id="portafolilink">
-                        aquí!
-                    </span>
-                </a>
-            </h3>
-        </div>
-    </div>
+
+        <!-- Footer with tech stack (preserved) -->
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="scripts/template.js"></script>
+    <script src="scripts/languages.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if(typeof canviaIdioma === 'function') canviaIdioma();
+        });
+    </script>
+    <script src="scripts/animations.js"></script>
 </body>
-<script src="scripts/navbar.js"></script>
-<script src="scripts/languages.js"></script>
-<script src="scripts/loader.js"></script>
-<script src="scripts/fullimg.js"></script>
+
+</html>

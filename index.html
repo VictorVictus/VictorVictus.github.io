@@ -1,82 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Victor's Web Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Puche · Electronic Engineering</title>
+    <!-- View transitions API cache -->
+    <meta name="view-transition" content="same-origin" />
+    <link rel="icon" type="image/png" href="img/favicons/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Serif + Sans pairing -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family    =Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicons/favicon.ico"">
-    <script src="scripts/navbar.js"></script>
-    <script src="scripts/languages.js"></script>
-    <script src="scripts/loader.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="barrasuperior">
-        <div class="titulo">
-            <h1 id="firma">VÍCTOR PUCHE</h1>
-        </div>
-        <div class="botones">
-            <p class="selecciodisclaimer" id="disclaimeridiom">Selecciona el teu Idioma:</p>
-            <select class="seleccioidioma" onchange="canviaIdioma()">
-                <option value="ca">Català</option>
-                <option value="es">Español</option>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-            </select>
-            <a href="https://www.linkedin.com/in/victorpuche">
-                <img src="img/linkedinblanco.png" alt="sidebarbutton" class="botonlinkedin">
-            </a>
-            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar openbtn" onclick="obreNavBar()">
-        </div>
-    </div>
-    <div id="mySidepanel" class="sidepanel">
-        <a href="javascript:void(0)" class="bototanca" onclick="tancaNavBar()">&times;</a>
-        <img src="img/Logo Marca Personal (sin titulo).png" id="logomarca">
-        <a href="index.html" id="inici">Inici</a>
-        <a href="aboutme.html" id="sobremi">Sobre mi</a>
-        <a href="cv.html" id="micv">El meu CV</a>
-        <a href="projectes.html" id="projectes">Projectes</a>
-    </div>      
-    <div class="contenidor">
-        <div class="esquerra">
-            <div class="contenidor-principal">
-                <h1 id="principal">Estudiant Enginyeria Electrònica Industrial i Automàtica</h1>
-                <h2 class="carrera">
-                    <span id="primerapart">Descobreix el meu portafoli</span>
-                    <span id="segonapart" onclick="window.location.href = 'aboutme.html';">i més sobre mi.</span>
-                </h2>
-                <h2 class="carrera" id="interessatparla">Interessat en parlar amb mi?</h2>
-                <a href="mailto:vpuche17@gmail.com?subject=Lets%20Meet!&body=Hi%20there,">
-                    <button id="contact">CONTACTA</button>  
-                </a>
+    <div id="navbar-placeholder"></div>
+
+    <main class="about-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">
+                    <span class="hero__pre-title" data-i18n="hero_pre">Electronic Engineering</span>
+                    <span data-i18n="firma">Victor Puche</span>
+                </h1>
+                <p class="hero__subtitle" data-i18n="hero_sub">Embedded systems · Robotics · Automation</p>
+                <a href="#contact" class="btn btn--primary" data-i18n="btn_connect">Let’s Connect</a>
+                <a href="cv.html" class="btn btn--outline" data-i18n="btn_cv">View CV</a>
             </div>
-            <div class="fetamb">
-                <p>
-                    <span id="fetambvis">
-                        Fet amb Visual Studio i hosted online amb GitHub:
-                    </span> 
-                    <span class="idiomes" id="idiprog">
-                        HTML, CSS i JavaScript - 2024
-                    </span> 
-                </p>
+            <div class="hero__visual">
+                <div class="hero__portrait-frame">
+                    <img src="img/mi-cara.jpeg" alt="Victor Puche">
+                </div>
+                <!-- Subtle geometric pattern overlay -->
             </div>
-            <div class="logos">
-                <img src="img/github.png">
-                <img src="img/html.png">
-                <img src="img/css.png">
-                <img src="img/js.png">
+        </section>
+
+        <!-- About Snapshot -->
+        <section id="about" class="about-preview">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about_title">Engineering with intention</h2>
+                <p data-i18n="about_p">I’m an Industrial Electronics Engineering student at UPC with hands‑on experience
+                    in hardware R&D and
+                    autonomous robotics. I believe in clean design, robust code, and solutions that endure.</p>
+                <a href="aboutme.html" class="link-underline" data-i18n="about_cta">Learn more about my journey →</a>
             </div>
-        </div>
-        <div class="dreta">
-            <img src="img/mi cara.jpg" alt="mi cara bro">
-        </div>
-    </div>
-    <div id="barracarrega"></div>
+        </section>
+
+        <!-- Featured Projects (from CV) -->
+        <section id="work" class="featured-work" style="margin-bottom: 6rem;">
+            <div class="container">
+                <h2 class="section-title" data-i18n="work_title">Selected Projects</h2>
+                <div class="project-grid">
+                    <!-- Card 1: Autonomous Coverage Robotics -->
+                    <article class="project-card">
+                        <div class="project-card__badge" data-i18n="card1_badge">Research</div>
+                        <h3 data-i18n="card1_title">Autonomous Coverage Path Planning</h3>
+                        <p class="project-card__meta">FH Technikum Wien · 2026</p>
+                        <p data-i18n="card1_p">Developed CPP algorithms with computer vision localization (ArUco) and
+                            polygonal
+                            decomposition for unknown environments.</p>
+                        <ul class="project-card__tags">
+                            <li><a href="https://en.wikipedia.org/wiki/Robot_Operating_System" target="_blank" rel="noopener noreferrer" class="tag-btn">ROS2</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener noreferrer" class="tag-btn">C++</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/OpenCV" target="_blank" rel="noopener noreferrer" class="tag-btn">OpenCV</a></li>
+                        </ul>
+                    </article>
+                    <!-- Card 2: R&D Hardware Intern -->
+                    <article class="project-card">
+                        <div class="project-card__badge" data-i18n="card2_badge">Industry R&D</div>
+                        <h3 data-i18n="card2_title">Smart Meter Testing Architecture</h3>
+                        <p class="project-card__meta">Smilics Technologies · 2025–2026</p>
+                        <p data-i18n="card2_p">Automated calibration tests with MODBUS, Grafana dashboards, and LTE
+                            integration for solar
+                            monitoring.</p>
+                        <ul class="project-card__tags">
+                            <li><a href="https://en.wikipedia.org/wiki/InfluxDB" target="_blank" rel="noopener noreferrer" class="tag-btn">InfluxDB</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/PuTTY" target="_blank" rel="noopener noreferrer" class="tag-btn">PuTTY</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/STM32" target="_blank" rel="noopener noreferrer" class="tag-btn">STM32</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Modbus" target="_blank" rel="noopener noreferrer" class="tag-btn">Modbus</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Grafana" target="_blank" rel="noopener noreferrer" class="tag-btn">Grafana</a></li>
+                        </ul>
+                    </article>
+                    <!-- Card 3: UPC Entrepreneurship -->
+                    <article class="project-card">
+                        <div class="project-card__badge" data-i18n="card3_badge">Leadership</div>
+                        <h3 data-i18n="card3_title">Faculty Representative & Mentor</h3>
+                        <p class="project-card__meta">Universitat Politecnica de Catalunya · 2023–2026</p>
+                        <p data-i18n="card3_p">Elected student representative managing budgets and bridging startups
+                            with university
+                            administration.</p>
+                        <ul class="project-card__tags">
+                            <li><a href="https://en.wikipedia.org/wiki/Leadership" target="_blank" rel="noopener noreferrer" class="tag-btn">Leadership</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Public_speaking" target="_blank" rel="noopener noreferrer" class="tag-btn">Public Speaking</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Negotiation" target="_blank" rel="noopener noreferrer" class="tag-btn">Negotiation</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Budget" target="_blank" rel="noopener noreferrer" class="tag-btn">Budget Mgmt</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Project_management" target="_blank" rel="noopener noreferrer" class="tag-btn">Project Mgmt</a></li>
+                        </ul>
+                    </article>
+                    <!-- Card 4: PCB Minipad -->
+                    <article class="project-card">
+                        <div class="project-card__badge" data-i18n="card4_badge">Hardware Design</div>
+                        <h3 data-i18n="card4_title">PCB Minipad</h3>
+                        <p class="project-card__meta">Personal Project</p>
+                        <p data-i18n="card4_p">Custom mechanical minipad designed from scratch, featuring schematic
+                            capture, PCB layout, and embedded firmware programming.</p>
+                        <ul class="project-card__tags">
+                            <li><a href="https://en.wikipedia.org/wiki/Altium_Designer" target="_blank" rel="noopener noreferrer" class="tag-btn">Altium 365</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/KiCad" target="_blank" rel="noopener noreferrer" class="tag-btn">KiCAD</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Printed_circuit_board" target="_blank" rel="noopener noreferrer" class="tag-btn">PCB Design</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer" class="tag-btn">C</a></li>
+                        </ul>
+                    </article>
+                    <!-- Card 5: Lapis -->
+                    <article class="project-card">
+                        <div class="project-card__badge" data-i18n="card5_badge">App Development</div>
+                        <h3 data-i18n="card5_title">Lapis</h3>
+                        <p class="project-card__meta">Personal Project · Dec 2025–Present</p>
+                        <p data-i18n="card5_p">A modern, collaborative To-Do application built with Flutter and Firebase, featuring real-time syncing and dynamic task management.</p>
+                        <ul class="project-card__tags">
+                            <li><a href="https://en.wikipedia.org/wiki/Flutter_(software)" target="_blank" rel="noopener noreferrer" class="tag-btn">Flutter</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Dart_(programming_language)" target="_blank" rel="noopener noreferrer" class="tag-btn">Dart</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Firebase" target="_blank" rel="noopener noreferrer" class="tag-btn">Firebase</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener noreferrer" class="tag-btn">C++</a></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact_title">Let's Connect</h2>
+                <p class="contact-text" data-i18n="contact_p">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:vpuche17@gmail.com" class="btn btn--primary" data-i18n="btn_email">vpuche17@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/victorpuche" target="_blank" rel="noopener noreferrer" class="btn btn--outline" data-i18n="btn_linkedin">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="scripts/template.js"></script>
+    <script src="scripts/languages.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof canviaIdioma === 'function') canviaIdioma();
+        });
+    </script>
+    <script src="scripts/animations.js"></script>
 </body>
+
 </html>

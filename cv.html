@@ -1,56 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <title>Victor's Web Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV · Victor Puche</title>
+    <!-- View transitions API cache -->
+    <meta name="view-transition" content="same-origin" />
     <link rel="icon" type="image/png" href="img/favicons/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Serif + Sans pairing -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="barrasuperior">
-        <div class="titulo">
-            <h1 id="firma">VÍCTOR PUCHE</h1>
+    <div id="navbar-placeholder"></div>
+
+    <!-- CV Content -->
+    <main class="cv-document">
+        <!-- Header with contact info -->
+        <header class="cv-header">
+            <h1>Víctor Puche</h1>
+            <p class="cv-subhead" data-i18n="cv_subhead">Electronics Engineering Student · Faculty Secretary &
+                Representative</p>
+            <div class="cv-contact">
+                <span>vpuche17@gmail.com</span>
+                <span class="separator">·</span>
+                <span>+34 692 91 85 68</span>
+                <span class="separator">·</span>
+                <span>linkedin.com/in/victorpuche</span>
+                <span class="separator">·</span>
+                <span>Palau‑Solità i Plegamans</span>
+            </div>
+        </header>
+
+        <!-- Professional Experience -->
+        <section class="cv-section">
+            <h2 data-i18n="cv_xp_title">Professional Experience</h2>
+
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_xp1_title">Researcher in Autonomous Coverage Robotics</h3>
+                    <span class="cv-entry__date">Feb 2026 – Jul 2026</span>
+                </div>
+                <p class="cv-entry__location">Fachhochschule Technikum Wien, Vienna</p>
+                <ul>
+                    <li data-i18n="cv_xp1_b1">Designed and implemented a coverage path planning (CPP) algorithm for
+                        autonomous robots in unknown environments, combining exploration and systematic coverage
+                        strategies.</li>
+                    <li data-i18n="cv_xp1_b2">Developed an exploration framework based on wall-following navigation,
+                        enabling online mapping and transformation into structured representations for offline planning.
+                    </li>
+                    <li data-i18n="cv_xp1_b3">Implemented computer vision localization with ArUco markers, including
+                        complete coordinate transformation from image to real world using camera modeling.</li>
+                    <li data-i18n="cv_xp1_b4">Built polygonal representations of the environment by sorting detected
+                        vertices and calculating enclosed areas for spatial reasoning.</li>
+                    <li data-i18n="cv_xp1_b5">Designed a decomposition algorithm to partition irregular areas into
+                        rectangular subregions aligned with the robot footprint, optimizing sweeping trajectories.</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_xp2_title">Hardware R&D Intern</h3>
+                    <span class="cv-entry__date">Jul 2025 – Jan 2026</span>
+                </div>
+                <p class="cv-entry__location">Smilics Technologies, Terrassa</p>
+                <ul>
+                    <li data-i18n="cv_xp2_b1">Developed automated testing architecture for high-precision current
+                        measurement systems (ANTARES) using MODBUS protocols and MTE reference machines.</li>
+                    <li data-i18n="cv_xp2_b2">Created real-time monitoring dashboards with Grafana and InfluxDB for CPU,
+                        temperature, and RMS currents on R&D prototypes.</li>
+                    <li data-i18n="cv_xp2_b3">Managed the migration and standardization of electronic component
+                        libraries from Excel to Altium 365.</li>
+                    <li data-i18n="cv_xp2_b4">Performed environmental stress testing programmatically via climate
+                        chambers and analyzed battery discharge behaviors using piecewise polynomial modeling.</li>
+                    <li data-i18n="cv_xp2_b5">Integrated LTE (4G) connectivity in industrial prototypes for remote solar
+                        energy monitoring.</li>
+                    <li data-i18n="cv_xp2_b6">Authored technical documentation including FMEAs and operational manuals.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_xp3_title">UPC Entrepreneurship Department Intern</h3>
+                    <span class="cv-entry__date">Sep 2024 – Jul 2025</span>
+                </div>
+                <p class="cv-entry__location">ESEIAAT, UPC, Terrassa</p>
+                <ul>
+                    <li data-i18n="cv_xp3_b1">Drafted comprehensive reports on departmental fiscal and administrative
+                        exercises for the Terrassa City Council and Barcelona Provincial Council.</li>
+                    <li data-i18n="cv_xp3_b2">Managed mentoring sessions, meetings, and events acting as a bridge
+                        between department coordination and startups.</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_xp4_title">Bachelor & Master Student Representative</h3>
+                    <span class="cv-entry__date">Oct 2023 – Present</span>
+                </div>
+                <p class="cv-entry__location">ESEIAAT, UPC, Terrassa</p>
+                <ul>
+                    <li data-i18n="cv_xp4_b1">Elected via universal student suffrage among over 5 candidates.</li>
+                    <li data-i18n="cv_xp4_b2">Actively participated in university governance sessions and voted on
+                        resolutions, including budget allocation.</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_xp5_title">Private Physics Tutor (High School)</h3>
+                    <span class="cv-entry__date">Spring 2024 – Summer 2024</span>
+                </div>
+                <p class="cv-entry__location">Palau‑Solità i Plegamans</p>
+                <ul>
+                    <li data-i18n="cv_xp5_b1">Guided groups of high school seniors in managing coursework to achieve top
+                        grades.</li>
+                    <li data-i18n="cv_xp5_b2">Prepared postgraduate students for university entrance exams (PAU).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="cv-section">
+            <h2 data-i18n="cv_ed_title">Academic Background</h2>
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_ed1_title">Bachelor in Mechatronics, Robotics and Automation Engineering (ERASMUS)
+                    </h3>
+                    <span class="cv-entry__date">Feb 2026 – Jun 2026</span>
+                </div>
+                <p class="cv-entry__location">Fachhochschule Technikum Wien, Vienna</p>
+            </div>
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_ed2_title">Bachelor in Industrial Electronics and Automation Engineering</h3>
+                    <span class="cv-entry__date">Sep 2022 – Jun 2026</span>
+                </div>
+                <p class="cv-entry__location">ESEIAAT, UPC, Terrassa</p>
+            </div>
+            <div class="cv-entry">
+                <div class="cv-entry__header">
+                    <h3 data-i18n="cv_ed3_title">High School (Scientific-Technological pathway)</h3>
+                    <span class="cv-entry__date" data-i18n="cv_ed3_date">Graduated: Jun 2022</span>
+                </div>
+                <p class="cv-entry__location">IES Ramon Casas i Carbó, Palau‑Solità i Plegamans</p>
+            </div>
+        </section>
+
+        <!-- Two-column layout for Skills & Languages -->
+        <div class="cv-two-columns">
+            <section class="cv-section cv-section--skills">
+                <h2 data-i18n="cv_skills_title">Technical Skills</h2>
+                <ul class="cv-skill-list">
+                    <li data-i18n="cv_skills_1"><strong>Languages:</strong> C++, C, Java, HTML, CSS, JavaScript,
+                        Assembly, Ladder, ST</li>
+                    <li data-i18n="cv_skills_2"><strong>Tools:</strong> Altium 365, SOLIDWORKS, MATLAB, ROS2, Grafana,
+                        InfluxDB, PowerBI</li>
+                    <li data-i18n="cv_skills_3"><strong>Protocols/Networks:</strong> MODBUS, TCP/IP, network
+                        configuration</li>
+                    <li data-i18n="cv_skills_4"><strong>AI & Productivity:</strong> ChatGPT, DeepSeek, Gemini, Copilot
+                    </li>
+                </ul>
+            </section>
+            <section class="cv-section cv-section--languages">
+                <h2 data-i18n="cv_lang_title">Languages</h2>
+                <ul class="cv-lang-list">
+                    <li><span class="lang-name" data-i18n="lang_ca">Catalan</span> <span class="lang-level"
+                            data-i18n="lvl_native">Native</span></li>
+                    <li><span class="lang-name" data-i18n="lang_es">Spanish</span> <span class="lang-level"
+                            data-i18n="lvl_native">Native</span></li>
+                    <li><span class="lang-name" data-i18n="lang_en">English</span> <span class="lang-level"
+                            data-i18n="lvl_c1">Very High (C1)</span></li>
+                    <li><span class="lang-name" data-i18n="lang_de">German</span> <span class="lang-level"
+                            data-i18n="lvl_b1">Medium (B1)</span></li>
+                    <li><span class="lang-name" data-i18n="lang_fr">French</span> <span class="lang-level"
+                            data-i18n="lvl_basic">Basic</span></li>
+                </ul>
+            </section>
         </div>
-        <div class="botones">
-            <p class="selecciodisclaimer" id="disclaimeridiom">Selecciona tu Idioma:</p>
-            <select class="seleccioidioma" onchange="canviaIdioma()">
-                <option value="ca">Català</option>
-                <option value="es">Español</option>
-                <option value="en">English</option>
-                <option value="de">Deutsch</option>
-            </select>
-            <a href="https://www.linkedin.com/in/victorpuche">
-                <img src="img/linkedinblanco.png" alt="sidebarbutton" class="botonlinkedin">
-            </a>
-            <img src="img/sidebarbuttonwhite.png" alt="sidebarbutton" class="botonsidebar openbtn" onclick="obreNavBar()">
-        </div>
-    </div>
-    <div id="spanishver">
-        <h1 id="cvtitle">Versió Castellana del CV</h1>
-        <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" class="bototanca" onclick="tancaNavBar()">&times;</a>
-            <img src="img/Logo Marca Personal (sin titulo).png" id="logomarca">
-            <a href="index.html" id="inici">Inici</a>
-            <a href="aboutme.html" id="sobremi">Sobre mí</a>
-            <a href="cv.html" id="micv">Mi CV</a>
-            <a href="projectes.html" id="projectes">Proyectos</a>
-        </div>
-        <div id="barracarrega"></div>
-        <div class="principalcv">
-            <embed src="pdfs/CV-ESP.pdf" type="application/pdf">
-            <h1 id="englishtitle">Versió en Anglès del CV</h1>
-            <embed src="pdfs/CV EN.pdf" type="application/pdf">
-        </div>
-    </div>
+
+        <!-- Soft Skills (optional row) -->
+        <section class="cv-section">
+            <h2 data-i18n="cv_soft_title">Personal Competencies</h2>
+            <div class="cv-soft-skills">
+                <span data-i18n="cv_soft_1">Project management</span>
+                <span data-i18n="cv_soft_2">Effective communication</span>
+                <span data-i18n="cv_soft_3">Research skills</span>
+                <span data-i18n="cv_soft_4">Initiative and autonomy</span>
+                <span data-i18n="cv_soft_5">Leadership and coordination</span>
+                <span data-i18n="cv_soft_6">Empathy and active listening</span>
+                <span data-i18n="cv_soft_7">Discipline under pressure</span>
+                <span data-i18n="cv_soft_8">Adaptability</span>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="scripts/template.js"></script>
+    <script src="scripts/languages.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof canviaIdioma === 'function') canviaIdioma();
+        });
+    </script>
+    <script src="scripts/animations.js"></script>
 </body>
-<script src="scripts/navbar.js"></script>
-<script src="scripts/languages.js"></script>
-<script src="scripts/loader.js"></script>
+
 </html>
