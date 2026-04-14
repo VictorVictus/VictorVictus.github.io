@@ -68,13 +68,6 @@ VictorVictus.github.io/
 │   └── fullimg.js      # Portrait image fullscreen handler (About page)
 │
 └── img/
-    ├── cara.jpg         # Portrait photo (About page)
-    ├── mi-cara.jpeg     # Portrait photo (Home hero)
-    ├── github.png       # Tech stack icon
-    ├── html.png         # Tech stack icon
-    ├── css.png          # Tech stack icon
-    ├── js.png           # Tech stack icon
-    └── favicons/        # Site favicon set
 ```
 
 ---
