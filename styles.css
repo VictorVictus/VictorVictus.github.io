@@ -139,6 +139,63 @@ body {
     color: white;
 }
 
+/* CONTACT SECTION BUTTONS */
+.contact-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.9rem 2rem;
+    font-size: 0.9rem;
+    min-width: 220px;
+    margin-right: 0 !important; /* Override default btn margin */
+}
+
+.contact-btn__icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.contact-btn__icon--img {
+    object-fit: contain;
+    /* For btn--primary (white text) */
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.btn--outline .contact-btn__icon--img {
+    /* For btn--outline (navy text) */
+    filter: brightness(0) sepia(1) hue-rotate(180deg) saturate(5); /* Attempt to match navy */
+    filter: contrast(0) brightness(0.2); /* Just make it dark */
+    opacity: 0.7;
+}
+
+.btn--outline:hover .contact-btn__icon--img {
+    /* For btn--outline hover (white text) */
+    filter: brightness(0) invert(1);
+    opacity: 1;
+}
+
+.btn--primary:hover {
+    /* For btn--primary hover (outline style) */
+    background-color: transparent;
+    color: var(--navy);
+}
+
+.btn--primary:hover .contact-btn__icon--img {
+    filter: contrast(0) brightness(0.2);
+}
+
+
 .hero__portrait-frame {
     width: 80%;
     margin: 0 auto;
