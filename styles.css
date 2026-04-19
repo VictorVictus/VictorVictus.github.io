@@ -6,6 +6,7 @@
     --gold: #C9A96E;
     --offwhite: #F9F6F0;
     --text-dark: #1E1E1E;
+    --bg-secondary: #f4eee5;
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Raleway', sans-serif;
 }
@@ -230,6 +231,122 @@ body {
     width: 60%;
     height: 3px;
     background-color: var(--burgundy);
+}
+
+/* EXPERTISE SECTION */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.expertise-item {
+    text-align: center;
+    padding: 2.5rem;
+    background: white;
+    border: 1px solid var(--sand);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--burgundy);
+    box-shadow: 0 12px 30px rgba(166, 35, 73, 0.1);
+}
+
+.expertise-item__icon {
+    width: 64px;
+    height: 64px;
+    background: var(--navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.expertise-item:hover .expertise-item__icon {
+    background: var(--burgundy);
+}
+
+.expertise-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.expertise-item p {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+/* ABOUT SUMMARY CARDS & HOBBIES */
+.about-summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.summary-card {
+    background: white;
+    padding: 2.5rem;
+    border-left: 6px solid var(--burgundy);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: scale(1.02);
+}
+
+.summary-card__icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.summary-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 0.8rem;
+    margin-top: 0;
+}
+
+.about-hobbies {
+    background: var(--navy);
+    color: white;
+    padding: 5rem 3rem;
+    text-align: center;
+    margin: 4rem 0;
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+}
+
+.about-hobbies h2 {
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.about-hobbies h2::after {
+    background-color: var(--gold);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-hobbies p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 300;
 }
 
 /* PROJECT CARDS */
@@ -1432,3 +1549,166 @@ body {
     color: #102C57 !important;
     border-color: #102C57 !important;
 }
+/* Project Card Gallery */
+.project-card__gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+    padding-bottom: 0.8rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--sand) transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+.project-card__gallery::-webkit-scrollbar {
+    height: 6px;
+}
+
+.project-card__gallery::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-card__gallery::-webkit-scrollbar-thumb {
+    background-color: var(--sand);
+    border-radius: 10px;
+}
+
+.project-card__gallery img {
+    flex: 0 0 140px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
+    border: 1px solid var(--sand);
+}
+
+.project-card__gallery img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: var(--burgundy);
+    z-index: 2;
+}
+
+/* Lightbox / Full Image View */
+#fullimatgecaixa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(11, 17, 26, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.4s ease;
+}
+
+#fullImg {
+    max-width: 90%;
+    max-height: 82vh;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #000;
+    animation: zoomIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 44px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    line-height: 1;
+    z-index: 2001;
+}
+
+.close-lightbox:hover {
+    transform: rotate(90deg);
+    color: var(--burgundy);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+.specialization {
+    margin: 4.5rem 0;
+    border-radius: 40px;
+    padding: 1rem 0;
+}
+
+[data-theme="dark"] .specialization {
+    background: #0F172A !important;
+}
+
+[data-theme="light"] .specialization {
+    background: #FDFBFA !important;
+    border: 1px solid var(--sand);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border: none;
+    font-size: 3.5rem;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    user-select: none;
+    z-index: 2100;
+    backdrop-filter: blur(4px);
+    font-weight: 200;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+    color: var(--gold);
+}
+
+.lightbox-nav--prev {
+    left: 40px;
+}
+
+.lightbox-nav--next {
+    right: 40px;
+}
+
+@media (max-width: 768px) {
+    .lightbox-nav {
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
+    }
+    .lightbox-nav--prev { left: 15px; }
+    .lightbox-nav--next { right: 15px; }
+}
+

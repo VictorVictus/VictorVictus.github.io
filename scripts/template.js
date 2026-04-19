@@ -43,6 +43,14 @@ const footerHTML = `
             <img src="img/js.png" alt="JavaScript" style="height: 30px; opacity: 0.7;">
         </div>
     </footer>
+    
+    <!-- Lightbox Layout -->
+    <div id="fullimatgecaixa">
+        <img src="" alt="Full size image" id="fullImg">
+        <span class="close-lightbox" onclick="closeFullImg()">&times;</span>
+        <button class="lightbox-nav lightbox-nav--prev" onclick="changeImg(-1)" aria-label="Previous image">&#8249;</button>
+        <button class="lightbox-nav lightbox-nav--next" onclick="changeImg(1)" aria-label="Next image">&#8250;</button>
+    </div>
 `;
 
 // Inject synchronously
@@ -83,3 +91,68 @@ if (toggleBtn) {
         applyTheme(isDark);
     };
 }
+
+// Lightbox Functions
+let currentGalleryImages = [];
+let currentImageIndex = 0;
+
+window.openFullImg = function(pic, el) {
+    const box = document.getElementById("fullimatgecaixa");
+    const img = document.getElementById("fullImg");
+    if (box && img) {
+        // Find all images in the same gallery container
+        if (el) {
+            const parent = el.closest('.project-card__gallery');
+            if (parent) {
+                currentGalleryImages = Array.from(parent.querySelectorAll('img')).map(i => i.src);
+                currentImageIndex = currentGalleryImages.indexOf(pic);
+            } else {
+                currentGalleryImages = [pic];
+                currentImageIndex = 0;
+            }
+        } else {
+            currentGalleryImages = [pic];
+            currentImageIndex = 0;
+        }
+
+        box.style.display = "flex";
+        img.src = pic;
+        document.body.style.overflow = "hidden";
+    }
+}
+
+window.changeImg = function(dir) {
+    if (currentGalleryImages.length <= 1) return;
+    
+    currentImageIndex += dir;
+    if (currentImageIndex < 0) currentImageIndex = currentGalleryImages.length - 1;
+    if (currentImageIndex >= currentGalleryImages.length) currentImageIndex = 0;
+    
+    const img = document.getElementById("fullImg");
+    if (img) {
+        // Transition effect
+        img.style.opacity = '0.6';
+        setTimeout(() => {
+            img.src = currentGalleryImages[currentImageIndex];
+            img.style.opacity = '1';
+        }, 100);
+    }
+}
+
+window.closeFullImg = function() {
+    const box = document.getElementById("fullimatgecaixa");
+    if (box) {
+        box.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}
+
+// Keyboard and Interaction
+window.addEventListener('keydown', (e) => {
+    const box = document.getElementById("fullimatgecaixa");
+    if (box && box.style.display === "flex") {
+        if (e.key === 'Escape') closeFullImg();
+        if (e.key === 'ArrowRight') changeImg(1);
+        if (e.key === 'ArrowLeft') changeImg(-1);
+    }
+});
