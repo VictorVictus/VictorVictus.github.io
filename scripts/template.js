@@ -1,5 +1,3 @@
-// scripts/template.js
-
 const navbarHTML = `
     <header class="navbar">
         <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
@@ -44,7 +42,6 @@ const footerHTML = `
         </div>
     </footer>
     
-    <!-- Lightbox Layout -->
     <div id="fullimatgecaixa">
         <img src="" alt="Full size image" id="fullImg">
         <span class="close-lightbox" onclick="closeFullImg()">&times;</span>
@@ -53,14 +50,14 @@ const footerHTML = `
     </div>
 `;
 
-// Inject synchronously
+// Inject components
 const navPlaceholder = document.getElementById('navbar-placeholder');
 if(navPlaceholder) navPlaceholder.outerHTML = navbarHTML;
 
 const footerPlaceholder = document.getElementById('footer-placeholder');
 if(footerPlaceholder) footerPlaceholder.outerHTML = footerHTML;
 
-// Initialize dark mode
+// Theme handling
 const toggleBtn = document.getElementById('dark-mode-toggle');
 if (toggleBtn) {
     const moon = toggleBtn.querySelector('.moon-icon');
@@ -92,7 +89,7 @@ if (toggleBtn) {
     };
 }
 
-// Lightbox Functions
+// Lightbox
 let currentGalleryImages = [];
 let currentImageIndex = 0;
 
@@ -100,7 +97,6 @@ window.openFullImg = function(pic, el) {
     const box = document.getElementById("fullimatgecaixa");
     const img = document.getElementById("fullImg");
     if (box && img) {
-        // Find all images in the same gallery container
         if (el) {
             const parent = el.closest('.project-card__gallery');
             if (parent) {
@@ -130,7 +126,6 @@ window.changeImg = function(dir) {
     
     const img = document.getElementById("fullImg");
     if (img) {
-        // Transition effect
         img.style.opacity = '0.6';
         setTimeout(() => {
             img.src = currentGalleryImages[currentImageIndex];
@@ -147,7 +142,6 @@ window.closeFullImg = function() {
     }
 }
 
-// Keyboard and Interaction
 window.addEventListener('keydown', (e) => {
     const box = document.getElementById("fullimatgecaixa");
     if (box && box.style.display === "flex") {
@@ -156,3 +150,4 @@ window.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') changeImg(-1);
     }
 });
+

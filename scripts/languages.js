@@ -1,4 +1,3 @@
-// languages.js
 var traduccions = {
     "en": {
         "firma": "VÍCTOR PUCHE",
@@ -87,7 +86,7 @@ var traduccions = {
         "cv_skills_1": "<strong>Languages:</strong> C++, C, Java, HTML, CSS, JavaScript, Assembly, Ladder, ST",
         "cv_skills_2": "<strong>Tools:</strong> Altium 365, SolidWorks, MATLAB, Maple, ROS2 Humble, STM32CubeProgrammer, Grafana, InfluxDB, PowerBI, JIRA",
         "cv_skills_3": "<strong>Protocols/Networks:</strong> MODBUS, TCP/IP, network configuration",
-        "cv_skills_4": "<strong>AI & Productivity:</strong> ChatGPT, DeepSeek, Gemini, Copilot",
+
         "cv_lang_title": "Languages",
         "lang_ca": "Catalan",
         "lang_es": "Spanish",
@@ -211,7 +210,7 @@ var traduccions = {
         "cv_skills_1": "<strong>Lenguajes:</strong> C++, C, Java, HTML, CSS, JavaScript, Assembly, Ladder, ST",
         "cv_skills_2": "<strong>Herramientas:</strong> Altium 365, SolidWorks, MATLAB, Maple, ROS2 Humble, STM32CubeProgrammer, Grafana, InfluxDB, PowerBI, JIRA",
         "cv_skills_3": "<strong>Protocolos/Redes:</strong> MODBUS, TCP/IP, configuración de redes",
-        "cv_skills_4": "<strong>IA & Productividad:</strong> ChatGPT, DeepSeek, Gemini, Copilot",
+
         "cv_lang_title": "Idiomas",
         "lang_ca": "Catalán",
         "lang_es": "Español",
@@ -335,7 +334,7 @@ var traduccions = {
         "cv_skills_1": "<strong>Llenguatges:</strong> C++, C, Java, HTML, CSS, JavaScript, Assembly, Ladder, ST",
         "cv_skills_2": "<strong>Eines:</strong> Altium 365, SolidWorks, MATLAB, Maple, ROS2 Humble, STM32CubeProgrammer, Grafana, InfluxDB, PowerBI, JIRA",
         "cv_skills_3": "<strong>Protocols/Xarxes:</strong> MODBUS, TCP/IP, configuració de xarxes",
-        "cv_skills_4": "<strong>IA i Productivitat:</strong> ChatGPT, DeepSeek, Gemini, Copilot",
+
         "cv_lang_title": "Idiomes",
         "lang_ca": "Català",
         "lang_es": "Espanyol",
@@ -458,7 +457,7 @@ var traduccions = {
         "cv_skills_1": "<strong>Sprachen:</strong> C++, C, Java, HTML, CSS, JavaScript, Assembly, Ladder, ST",
         "cv_skills_2": "<strong>Werkzeuge:</strong> Altium 365, MATLAB, ROS2, Grafana, InfluxDB, PowerBI",
         "cv_skills_3": "<strong>Protokolle:</strong> MODBUS, TCP/IP",
-        "cv_skills_4": "<strong>KI:</strong> ChatGPT, DeepSeek, Gemini",
+
         "cv_lang_title": "Sprachen",
         "lang_ca": "Katalanisch",
         "lang_es": "Spanisch",
@@ -501,21 +500,12 @@ function canviaIdioma() {
     var sels = document.querySelectorAll(".seleccioidioma");
     if (sels.length === 0) return;
 
-    // Attempt to get context from the changed dropdown, or fallback to first
-    var idiomaSeleccionat = sels[0].value;
-    // Actually we should trigger from the specific event to know which value, 
-    // but a global function canviaIdioma() called onChange often pulls from standard class
-
-    // Because there could be multiple selectors, let's grab the value of the targeted one
-    // But since they are all identical, using sels[0] is often fine unless it's out of sync
-    // Wait, onchange="canviaIdioma()" isn't passing 'this'. Let's find the active one:
     var activeSelValue = (event && event.target && event.target.value) ? event.target.value : sels[0].value;
-    idiomaSeleccionat = activeSelValue;
+    var idiomaSeleccionat = activeSelValue;
 
-    // Persist English as default or standard user pref across tabs
     localStorage.setItem('lang', idiomaSeleccionat);
 
-    // Sync all
+    // Sync all dropdowns
     sels.forEach(function (s) { s.value = idiomaSeleccionat; });
 
     var keys = Object.keys(traduccions[idiomaSeleccionat] || {});
@@ -523,13 +513,13 @@ function canviaIdioma() {
         var key = keys[i];
         var text = traduccions[idiomaSeleccionat][key];
 
-        // by ID
+        // update by ID
         var elem = document.getElementById(key);
         if (elem) {
             elem.innerHTML = text;
         }
 
-        // by data-i18n attribute
+        // update by data-i18n
         var elements = document.querySelectorAll('[data-i18n="' + key + '"]');
         elements.forEach(function (el) {
             el.innerHTML = text;
