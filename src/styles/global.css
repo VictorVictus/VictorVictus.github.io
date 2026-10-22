@@ -294,6 +294,17 @@ button {
   z-index: 100;
   border-bottom: 1px solid var(--line);
   background: var(--paper);
+  transition: transform 0.28s ease;
+}
+
+.site-header--hidden {
+  transform: translateY(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+  }
 }
 
 .header-inner {

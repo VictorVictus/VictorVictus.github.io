@@ -10,11 +10,31 @@ export function Header() {
   const { t, lang, setLang } = useI18n()
   const { theme, toggle } = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
+  const [headerHidden, setHeaderHidden] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
     setMenuOpen(false)
   }, [location.pathname, location.hash])
+
+  useEffect(() => {
+    let lastY = window.scrollY
+
+    const onScroll = () => {
+      const y = window.scrollY
+      const dy = y - lastY
+
+      if (dy > 4 && y > 80) {
+        setHeaderHidden(true)
+      } else if (dy < -4 || y <= 80) {
+        setHeaderHidden(false)
+      }
+      lastY = y
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     if (!menuOpen) return
@@ -52,7 +72,7 @@ export function Header() {
 
   return (
     <>
-      <header className="site-header">
+      <header className={`site-header${headerHidden ? ' site-header--hidden' : ''}`}>
         <div className="container header-inner">
           <Link to="/" className="brand" aria-label="Víctor Puche — home">
             <span className="brand__mark" aria-hidden="true">
